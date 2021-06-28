@@ -31,5 +31,8 @@ public class PlayerController : MonoBehaviour
         // gameObject앞에 따로 변수가 지정되지 않은 경우 이 스크립트가 컴포넌트로 부착된 오브젝트를 받아옴
         // 죽을 경우 오브젝트 비활성화
         gameObject.SetActive(false);
+
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        gameManager.EndGame();
     }
 }
