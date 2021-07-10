@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour {
 
         playerRigidbody.velocity = Vector2.zero;    // 속도를 0으로 만듦
         isDead = true;
+
+        GameManager.instance.OnPlayerDead();
    }
 
    private void OnTriggerEnter2D(Collider2D other) {
